@@ -3,3 +3,13 @@ $bgColor : #181828;
 $policeColor : #fbf9fa;
 $frontColor : #303054;
 $frontPanelBgColor: #242440;
+$footerColor : #11111c;
+
+html {
+    background-color: $bgColor;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
