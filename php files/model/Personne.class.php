@@ -3,7 +3,7 @@
 class Personne
 {
 
-    protected $id, $nom, $prenom, $dateNaissance, $lieuNaissance, $dateDeces, $lieuDeces;
+    protected $personne_id, $nom, $prenom, $date_de_naissance, $lieu_de_naissance, $date_de_deces, $lieu_de_deces;
 
     public function __construct(array $donnees)
     {
@@ -22,95 +22,116 @@ class Personne
         }
     }
 
-    public function setId($id)
+    /**
+     * @return mixed
+     */
+    public function get_personne_id()
     {
-        $this->id = $id;
+        return $this->personne_id;
     }
 
-    public function setNom($nom)
+    /**
+     * @param mixed $personne_id
+     */
+    public function set_personne_id($personne_id): void
     {
-        $this->nom = $nom;
-    }
-
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
-
-    public function setDateNaissance($dateNaissance)
-    {
-        $this->dateNaissance = $dateNaissance;
-    }
-
-    public function setLieuNaissance($lieuNaissance)
-    {
-        $this->lieuNaissance = $lieuNaissance;
-    }
-
-    public function setDateDeces($dateDeces)
-    {
-        $this->dateDeces = $dateDeces;
-    }
-
-    public function setLieuDeces($lieuDeces)
-    {
-        $this->lieuDeces = $lieuDeces;
+        $this->personne_id = $personne_id;
     }
 
     /**
      * @return mixed
      */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNom()
+    public function get_nom()
     {
         return $this->nom;
     }
 
     /**
+     * @param mixed $nom
+     */
+    public function set_nom($nom): void
+    {
+        $this->nom = $nom;
+    }
+
+    /**
      * @return mixed
      */
-    public function getPrenom()
+    public function get_prenom()
     {
         return $this->prenom;
     }
 
     /**
-     * @return mixed
+     * @param mixed $prenom
      */
-    public function getDateNaissance()
+    public function set_prenom($prenom): void
     {
-        return $this->dateNaissance;
+        $this->prenom = $prenom;
     }
 
     /**
      * @return mixed
      */
-    public function getLieuNaissance()
+    public function get_date_de_naissance()
     {
-        return $this->lieuNaissance;
+        return $this->date_de_naissance;
+    }
+
+    /**
+     * @param mixed $date_de_naissance
+     */
+    public function set_date_de_naissance($date_de_naissance): void
+    {
+        $this->date_de_naissance = $date_de_naissance;
     }
 
     /**
      * @return mixed
      */
-    public function getDateDeces()
+    public function get_lieu_de_naissance()
     {
-        return $this->dateDeces;
+        return $this->lieu_de_naissance;
+    }
+
+    /**
+     * @param mixed $lieu_de_naissance
+     */
+    public function set_lieu_de_naissance($lieu_de_naissance): void
+    {
+        $this->lieu_de_naissance = $lieu_de_naissance;
     }
 
     /**
      * @return mixed
      */
-    public function getLieuDeces()
+    public function get_date_de_deces()
     {
-        return $this->lieuDeces;
+        return $this->date_de_deces;
+    }
+
+    /**
+     * @param mixed $date_de_deces
+     */
+    public function set_date_de_deces($date_de_deces): void
+    {
+        $this->date_de_deces = $date_de_deces;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function get_lieu_de_deces()
+    {
+        return $this->lieu_de_deces;
+    }
+
+    /**
+     * @param mixed $lieu_de_deces
+     */
+    public function set_lieu_de_deces($lieu_de_deces): void
+    {
+        $this->lieu_de_deces = $lieu_de_deces;
     }
 
 

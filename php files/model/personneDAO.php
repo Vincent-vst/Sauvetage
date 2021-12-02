@@ -14,16 +14,16 @@ class personneDAO
     {
         $this->bdd->execQuery(
             "INSERT INTO dpsk_personne (nom, prenom, date_de_naissance, lieu_de_naissance, date_de_deces, lieu_de_deces) VALUES (?, ?, ?, ?, ?, ?)",
-            array($personne->getNom(), $personne->getPrenom(), $personne->getDateNaissance(), $personne->getLieuNaissance(), $personne->getDateDeces(), $personne->getLieuDeces())
+            array($personne->get_nom(), $personne->get_prenom(), $personne->get_date_de_naissance(), $personne->get_lieu_de_naissance(), $personne->get_date_de_deces(), $personne->get_lieu_de_deces())
         );
-        $personne->setId($this->bdd->lastInsertId());
+        $personne->set_personne_id($this->bdd->lastInsertId());
     }
 
     public function update(Personne $personne)
     {
         $this->bdd->execQuery(
             "UPDATE dpsk_personne SET nom = ?, prenom = ?, date_de_naissance = ?, lieu_de_naissance = ?, date_de_deces = ?, lieu_de_deces = ? WHERE personne_id = ?",
-            array($personne->getNom(), $personne->getPrenom(), $personne->getDateNaissance(), $personne->getLieuNaissance(), $personne->getDateDeces(), $personne->getLieuDeces(), $personne->getId())
+            array($personne->get_nom(), $personne->get_prenom(), $personne->get_date_de_naissance(), $personne->get_lieu_de_naissance(), $personne->get_date_de_deces(), $personne->get_lieu_de_deces(), $personne->get_personne_id())
         );
     }
 
@@ -31,7 +31,7 @@ class personneDAO
     {
         $this->bdd->execQuery(
             "DELETE ON CASCADE FROM dpsk_personne WHERE personne_id = ?",
-            array($personne->getId())
+            array($personne->get_personne_id())
         );
     }
 
