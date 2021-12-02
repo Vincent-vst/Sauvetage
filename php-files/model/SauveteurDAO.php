@@ -20,6 +20,7 @@ class SauveteurDAO
             "INSERT INTO dmfr_sauveteur (metier, personne_id) VALUES (?, ?)",
             array($sauveteur->get_metier(), $sauveteur->get_personne_id())
         );
+        $sauveteur->set_sauveteur_id($this->bdd->lastInsertId());
     }
 
     public function update(Sauveteur $sauveteur)
