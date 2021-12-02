@@ -1,13 +1,7 @@
 <?php
 
-class BateauCouleDAO
+class BateauCouleDAO extends BateauDAO
 {
-    private $bdd;
-
-    public function __construct(BDD $bdd)
-    {
-        $this->bdd = $bdd;
-    }
 
     public function add(BateauCoule $bateau)
     {

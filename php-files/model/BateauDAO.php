@@ -2,7 +2,7 @@
 
 class BateauDAO
 {
-    private $bdd;
+    protected $bdd;
 
     public function __construct(BDD $bdd)
     {
@@ -33,5 +33,45 @@ class BateauDAO
             array($bateau->get_bateau_id())
         );
     }
+
+    public function getById($id) {
+        $bateau = $this->bdd->execQuery(
+            "SELECT * FROM rids_bateau WHERE bateau_id = ?",
+            array($id)
+        );
+
+        if (count($bateau) !== 0) {
+            return new Bateau($bateau[0]);
+        } else {
+            return null;
+        }
+    }
+
+    public function getList() {
+        $query = $this->bdd->execQuery(
+            "SELECT * FROM rids_bateau"
+        );
+
+        $bateaux = array();
+        foreach ($query as $bateau) {
+            $bateaux[] = new Bateau($bateau);
+        }
+        return $bateaux;
+    }
+
+    public function getByName($name) {
+        $query = $this->bdd->execQuery(
+            "SELECT * FROM rids_bateau WHERE LOWER(nom) = LOWER(?)",
+            array($name)
+        );
+
+        $bateaux = array();
+        foreach ($query as $bateau) {
+            $bateaux[] = new Bateau($bateau);
+        }
+        return $bateaux;
+    }
+
+    // Possibilité d'implémenter l'accès par nationalité ou par type
 
 }
