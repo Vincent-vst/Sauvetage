@@ -12,4 +12,4 @@ const Footer = () => {
         </div>
     )
 }
-export default Navigation;
+export default Footer;
