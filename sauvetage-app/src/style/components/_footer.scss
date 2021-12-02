@@ -1,3 +1,20 @@
 .footer {
-    background-color: $footerColor
+    background-color: #11111c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .footerRight {
+        font-size: 20px;
+        h1 {
+            display: inline-block;
+            padding:20px;
+        }
+    }
+    .footerRight {
+        font-size: 20px;
+        h1 {
+            display: inline-block;
+            padding:20px;
+        }
+    }
 }

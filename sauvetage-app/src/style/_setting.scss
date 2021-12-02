@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 $roseColor : #c53f85;
 $bgColor : #181828;
 $policeColor : #fbf9fa;
@@ -6,6 +7,8 @@ $frontPanelBgColor: #242440;
 $footerColor : #11111c;
 
 html {
+    font-family: Source Sans Pro;
+    color: $policeColor;
     background-color: $bgColor;
 
 }
@@ -13,3 +16,12 @@ body {
     margin: 0;
     padding: 0;
 }
+a:-webkit-any-link {
+    color: $policeColor;
+    cursor: pointer;
+    text-decoration: none;
+}
+h1 {
+    font-size:20px;
+}
+
