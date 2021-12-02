@@ -6,13 +6,14 @@ import  Communaute from './pages/Communaute';
 import  Connexion from './pages/Connexion';
 import  Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import Accueil from './pages/Accueil';
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Footer/>} />
-          </Routes>
+        <Routes>
+            <Route path="/" element={<Accueil />} />
+        </Routes>
       </BrowserRouter>
     </div>
   
