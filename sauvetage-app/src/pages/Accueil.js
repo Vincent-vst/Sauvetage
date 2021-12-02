@@ -7,9 +7,6 @@ import Recherche from "../components/Recherche";
 const Accueil = () => {
     return (
         <div className="accueil">
-            <Logo/>
-            <Recherche/>
-            <Nav />
             <h1>Ceci est la home page</h1>
             <Pres />
             <Actualites />
