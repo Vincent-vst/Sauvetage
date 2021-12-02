@@ -29,7 +29,7 @@ class MedailleDAO
     public function delete(Medaille $medaille)
     {
         $this->bdd->execQuery(
-            "DELETE ON CASCADE FROM dpsk_personne WHERE personne_id = ?",
+            "DELETE ON CASCADE FROM fkdm_medaille WHERE medaille_id = ?",
             array($medaille->get_medaille_id())
         );
     }
