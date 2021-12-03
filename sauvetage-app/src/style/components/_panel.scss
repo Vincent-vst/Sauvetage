@@ -1,0 +1,8 @@
+.panel {
+    background-color: $frontColor;
+    right: 50%; 
+    transform : translateX(50%);
+    position:absolute;
+    border-radius: 10px;
+    padding: 1em;
+}
