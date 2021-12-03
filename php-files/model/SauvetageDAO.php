@@ -34,4 +34,18 @@ class SauvetageDAO
         );
     }
 
+    public function getSauvetageWithBateauS(BateauSauveteur $bateau) {
+        return $this->bdd->execQuery(
+            "SELECT * FROM sdff_sauvetage WHERE sauvetage_id IN (SELECT sauvetage_id FROM dfmp_liste_bateau_sauveteur WHERE bateau_sauveteur_id = ?)",
+            array($bateau->get_bateau_sauveteur_id())
+        );
+    }
+
+    public function getSauvetageOfBateau(BateauCoule $bateau) {
+        return $this->bdd->execQuery(
+            "SELECT * FROM sdff_sauvetage WHERE bateau_coule_id = ?",
+            array($bateau->get_bateau_coule_id())
+        );
+    }
+
 }
