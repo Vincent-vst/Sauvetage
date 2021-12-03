@@ -45,6 +45,6 @@ if(isset($_GET["id"]) && !empty($_GET["id"])) {
         $json_sauvetages[] = $json_sauvetage;
     }
     $json_sauveteur["sauvetages"] = $json_sauvetages;
-    $json_data["objet"] = $json_sauveteur;
+    $json_data["objet"] = [$json_sauveteur];
     echo json_encode($json_data);
 }

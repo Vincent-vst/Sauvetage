@@ -1,5 +1,4 @@
 <?php
-require("Medaille.class.php");
 
 class MedailleDAO
 {
@@ -37,18 +36,16 @@ class MedailleDAO
 
     public function getById(int $id): ?Medaille
     {
-        
-            $medaille = $this->bdd->execQuery(
-                "SELECT * FROM fkdm_medaille WHERE medaille_id = ?",
-                array($id)
-            );
-    
-            if (count($medaille) !== 0) {
-                return new Medaille($medaille[0]);
-            } else {
-                return null;
-            }
-        
+        $medaille = $this->bdd->execQuery(
+            "SELECT * FROM fkdm_medaille WHERE medaille_id = ?",
+            array($id)
+        );
+
+        if (count($medaille) !== 0) {
+            return new Medaille($medaille[0]);
+        } else {
+            return null;
+        }
     }
 
     public function getByName(string $name): array
