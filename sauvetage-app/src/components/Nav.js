@@ -6,7 +6,7 @@ const Nav = () => {
         <div className="navigation">
             <NavLink exact to="/" className={({ isActive }) => isActive ? "red" : "blue"}>Accueil</NavLink>
             <NavLink exact to="/Articles" className={({ isActive }) => isActive ? "red" : "blue"}>Articles</NavLink>
-            <NavLink exact to="/AProros" className={({ isActive }) => isActive ? "red" : "blue"}>À Propos</NavLink>
+            <NavLink exact to="/APropos" className={({ isActive }) => isActive ? "red" : "blue"}>À Propos</NavLink>
             <NavLink exact to="/Communaute" className={({ isActive }) => isActive ? "red" : "blue"}>Communauté</NavLink>
         </div>
     );

@@ -7,7 +7,6 @@ import Recherche from "../components/Recherche";
 const Accueil = () => {
     return (
         <div className="accueil">
-            <h1>Ceci est la home page</h1>
             <Pres />
             <Actualites />
         </div>

@@ -23,6 +23,7 @@ const Footer = () => {
                 <h1>En savoir plus</h1>
                 <ul>
                     <li><NavLink to="/APropos">A propos</NavLink></li>
+                    <li><NavLink to="/Historique">Historique</NavLink></li>
                 </ul>
             </div>       
             <div className="footerLiens">
