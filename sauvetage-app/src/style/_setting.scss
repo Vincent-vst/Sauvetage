@@ -6,6 +6,19 @@ $frontColor : #303054;
 $frontPanelBgColor: #242440;
 $footerColor : #11111c;
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $bgColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient( $frontColor, $roseColor );
+    border-radius: 25px;
+}
+
 html {
     font-family: Source Sans Pro;
     color: $policeColor;
