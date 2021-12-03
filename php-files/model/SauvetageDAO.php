@@ -48,4 +48,11 @@ class SauvetageDAO
         );
     }
 
+    public function getSauvetageWithSauveteur($id) {
+        return $this->bdd->execQuery(
+            "SELECT * FROM sdff_sauvetage NATURAL JOIN agbd_liste_sauveteurs NATURAL JOIN dmfr_sauveteur WHERE sauveteur_id = ?",
+            array($id)
+        );
+    }
+
 }
