@@ -5,7 +5,7 @@ import Recherche from './Recherche';
 
 const Header = () => {
     return (
-        <div>
+        <div classe="header">
             <Logo/>
             <Nav/>
             <Recherche/>

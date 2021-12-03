@@ -1,6 +1,24 @@
 
-img, .navigation {
-    display: grid;   
-    grid-template-columns: 10rem 3fr 1fr;
-    grid-template-rows: 1fr;
+.logo, .navigation, .recherche {
+    display: inline-block;   
+}
+img {
+    width: 50%;
+}
+
+.logo {
+    padding-left: 3.5rem;
+}
+
+.recherche{
+    padding: 5rem;
+    float: right;
+}
+
+
+input {
+    padding: 5px;
+    background-color: $footerColor;
+    border: none;
+    color: $policeColor;
 }

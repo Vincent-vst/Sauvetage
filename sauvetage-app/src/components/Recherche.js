@@ -2,8 +2,8 @@ import React from 'react';
 
 const recherche = () => {
     return (
-        <div>
-            <input type="text" placeholder="Rechercher" />
+        <div class="recherche">
+            <input type="text" placeholder="Rechercher"/>
         </div>
     );
 };
