@@ -2,8 +2,9 @@ const Actualites = () => {
     return (
         <div className="actualites">
             <h2>Actualités</h2>
+            <div class="contener">
             <div class="Actu_un">
-            <h3 >test1</h3>
+            <h3 >Titre1</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Aliquam euismod faucibus nibh nec molestie. 
@@ -11,12 +12,12 @@ const Actualites = () => {
                 Morbi consequat, risus ac gravida pellentesque, ligula laoreet.
             </p>
             <button>
-                More
+                Voir plus
             </button>
         </div>
 
         <div class="Actu_deux">
-            <h3>test2</h3>
+            <h3>Titre2</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Aliquam euismod faucibus nibh nec molestie. 
@@ -24,12 +25,12 @@ const Actualites = () => {
                 Morbi consequat, risus ac gravida pellentesque, ligula laoreet.
             </p>
             <button>
-                More
+                Voir plus
             </button>
         </div>
 
         <div class="Actu_trois">
-            <h3>test3</h3>
+            <h3>Titre3</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Aliquam euismod faucibus nibh nec molestie. 
@@ -37,8 +38,9 @@ const Actualites = () => {
                 Morbi consequat, risus ac gravida pellentesque, ligula laoreet.
             </p>
             <button>
-                More
+                Voir plus
             </button>
+        </div>
         </div>
         </div>
     );

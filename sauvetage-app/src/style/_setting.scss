@@ -6,6 +6,8 @@ $frontColor: #303054;
 $frontPanelBgColor: #242440;
 $footerColor: #11111c;
 $greyText: #afabab;
+$actuColor : #1f1f32;
+$actuColor2 : #13131f;
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -58,4 +60,31 @@ ul {
     padding-bottom:300px;
     position:relative;
     height: 100vh;
+}
+
+button {
+    appearance: auto;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: $roseColor;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 10px;
+    border-style: none;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: none;
+    border-radius: 5px;
+    padding:10px;
 }
