@@ -1,0 +1,27 @@
+{
+	"type":"sauveteur",
+	"objet":
+	{
+		"sauveteur_id":1,
+		"nom":"jean",
+		"prenom":"jacques",
+		"date_naissance":"1870-10-10",
+		"lieu_naissance":"Dunkerque France",
+		"date_deces":"1920-10-10",
+		"lieu_deces":"Dunkerque France",
+		"metier":"charpentier",
+		"sauvetages":[{
+			"id":1,
+			"date":"1910-10-10",
+			"sauvetage_id":1,
+			"bateau_coule":{"id":1,
+							"nom":"LeBato"}
+		}],
+		"medailles":
+			[{"nom":"medailleswag",
+			"medaille_id":1,
+			"date":"1905-10-10"
+			}],
+		"lien_doc":"../doc/jeanjaques1.md",
+	}
+}

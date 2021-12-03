@@ -1,0 +1,21 @@
+{
+	"type":"sauveteur",
+	"objet":
+	{
+		"type_bateau":"canoe",
+		"bateau_sauveteur_id":1,
+		"nom":"BatoToutBo",
+		"date_mise_en_servie":"1870-10-10",
+		"date_arret_service":"1920-10-10",
+		"nationalité":"Belge",
+		"sauvetages":[{
+			"id":1,
+			"date":"1910-10-10",
+			"sauvetage_id":1,
+			"bateau_coule":{"id":1,
+							"nom":"LeBato"}
+		}],
+		"lien_doc":"../doc/BatoToutBo1.md",	
+	}
+	
+}

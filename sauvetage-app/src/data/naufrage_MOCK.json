@@ -1,0 +1,23 @@
+{
+	"type":"naufrage",
+	"objet":
+	{
+		"naufrage_id":1,
+		"nom":"Lebolosse",
+		"prenom":"Pierre",
+		"date_naissance":"1860-10-10",
+		"lieu_naissance":"Dunkerque France",
+		"date_deces":"1910-10-10",
+		"lieu_deces":"Dunkerque France",
+		"sauvetages":[{
+			"id":1,
+			"date":"1910-10-10",
+			"sauvetage_id":1,
+			"statut":1,
+			"bateau_coule":{"id":1,
+							"nom":"LeBato"}
+		}],
+		
+		"lien_doc":"../doc/pierre1.md",
+	}
+}

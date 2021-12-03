@@ -9,6 +9,8 @@ import Historique from './pages/Historique'
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Accueil from './pages/Accueil';
 import Header from './components/Header';
+import MedaillesList from './posts/MedaillesList';
+
 const App = () => {
   return (
     <div className="App">
@@ -22,6 +24,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
+      <MedaillesList />
     </div>
   
     );

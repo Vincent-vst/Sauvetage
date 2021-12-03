@@ -1,0 +1,19 @@
+{
+	"type":"bateau_coule",
+	"objet":
+	{
+		"type_bateau":"chaloupe",
+		"bateau_coule_id":1,
+		"nom":"LeBato",
+		"date_mise_en_servie":"1870-10-10",
+		"date_arret_service":"1920-10-10",
+		"nationalité":"Anglais",
+		"sauvetages":[{
+			"id":1,
+			"date":"1910-10-10",
+			"sauvetage_id":1,
+			"nombre_mort":1000,
+		}],
+		"lien_doc":"../doc/BatoToutBo1.md",	
+	}
+}
