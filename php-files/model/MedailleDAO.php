@@ -34,4 +34,19 @@ class MedailleDAO
         );
     }
 
+    public function getById(int $id){
+        {
+            $medaille = $this->bdd->execQuery(
+                "SELECT * FROM fkdm_medaille WHERE medaille_id = ?",
+                array($id)
+            );
+    
+            if (count($medaille) !== 0) {
+                return new Medaille($medaille[0]);
+            } else {
+                return null;
+            }
+        }
+    }
+
 }
