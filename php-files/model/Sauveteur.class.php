@@ -1,18 +1,21 @@
 <?php
 
+require("Personne.class.php");
+
 class Sauveteur extends Personne
 {
     protected $sauveteur_id, $metier;
 
     public function __construct(array $donnees)
     {
+        parent::__construct($donnees);
         $this->hydrate($donnees);
     }
 
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value) {
-            $method = 'set' . ucfirst($key);
+            $method = 'set_' . $key;
 
             if (method_exists($this, $method)) {
                 $this->$method($value);

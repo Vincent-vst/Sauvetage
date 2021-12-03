@@ -1,4 +1,5 @@
 <?php
+require("Medaille.class.php");
 
 class MedailleDAO
 {

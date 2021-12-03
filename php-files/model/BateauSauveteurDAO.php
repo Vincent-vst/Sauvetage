@@ -1,13 +1,20 @@
 <?php
+require("BateauSauveteur.class.php");
 
-class BateauSauveteurDAO extends BateauDAO
+class BateauSauveteurDAO
 {
+    protected $bdd;
+
+    public function __construct(BDD $bdd)
+    {
+        $this->bdd = $bdd;
+    }
 
     public function add(BateauSauveteur $bateau)
     {
         $this->bdd->execQuery(
-            "INSERT INTO rids_bateau (nom, type, date_debut_utilisation, date_fin_utilisation) VALUES (?, ?, ?, ?)",
-            array($bateau->get_nom(), $bateau->get_type(), $bateau->get_date_debut_utilisation(), $bateau->get_date_fin_utilisation())
+            "INSERT INTO rids_bateau (nom, type, date_debut_utilisation, date_fin_utilisation, nationalite) VALUES (?, ?, ?, ?, ?)",
+            array($bateau->get_nom(), $bateau->get_type(), $bateau->get_date_debut_utilisation(), $bateau->get_date_fin_utilisation(), $bateau->get_nationalite())
         );
         $bateau->set_bateau_id($this->bdd->lastInsertId());
         $this->bdd->execQuery(
@@ -28,7 +35,7 @@ class BateauSauveteurDAO extends BateauDAO
     public function delete(BateauSauveteur $bateau)
     {
         $this->bdd->execQuery(
-            "DELETE ON CASCADE FROM rids_bateau WHERE bateau_id = ?",
+            "DELETE FROM rids_bateau WHERE bateau_id = ?",
             array($bateau->get_bateau_id())
         );
     }
