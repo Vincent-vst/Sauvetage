@@ -1,5 +1,4 @@
 <?php
-require("BateauSauveteur.class.php");
 
 class BateauSauveteurDAO
 {
@@ -39,4 +38,19 @@ class BateauSauveteurDAO
             array($bateau->get_bateau_id())
         );
     }
+
+    public function getById($id): ?BateauSauveteur
+    {
+        $bateau = $this->bdd->execQuery(
+            "SELECT * FROM kdfm_bateau_sauveteur NATURAL JOIN rids_bateau WHERE bateau_sauveteur_id = ?",
+            array($id)
+        );
+
+        if (count($bateau) !== 0) {
+            return new BateauSauveteur($bateau[0]);
+        } else {
+            return null;
+        }
+    }
+
 }
