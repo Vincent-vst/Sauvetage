@@ -9,7 +9,7 @@ import Historique from './pages/Historique'
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Accueil from './pages/Accueil';
 import Header from './components/Header';
-import Medaille from './pages/Medaille';
+import Sauveteur from './pages/Sauveteur';
 const App = () => {
   return (
     <div className="App">
@@ -20,7 +20,7 @@ const App = () => {
             <Route path="/articles" element={<Articles />} />
             <Route path="/historique" element={<Historique />} />
             <Route path="/apropos" element={<APropos />} />
-            <Route path="/medaille" element={<Medaille />} />
+            <Route path="/Sauveteur" element={<Sauveteur />} />
         </Routes>
         <Footer />
       </BrowserRouter>
