@@ -3,7 +3,7 @@ import data from "../data/medailles.json";
 
 const sauveteur = data.objet;
 
-class Sauveteur extends Component {
+class SauveteurDAO extends Component {
     render () {
         return (
             <div>
@@ -27,4 +27,4 @@ class Sauveteur extends Component {
     }
 }
 
-export default Sauveteur;
+export default SauveteurDAO;
