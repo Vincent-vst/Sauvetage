@@ -1,3 +1,40 @@
 .actualites {
     text-align: center;
+    display: grid;
+    grid-template-columns: 1.75fr 1fr 1fr 1fr 1.75fr;
+    padding-bottom: 50px;
+}
+.actualites h2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.Actu_un {
+    background-color: #303054;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.Actu_deux {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Actu_trois {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.Actu_deux, .Actu_trois {
+    background-color: #242440;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.Actu_un ,.Actu_deux, .Actu_trois {
+    border-radius: 5px;
 }
