@@ -1,0 +1,29 @@
+input[type="checkbox"]:checked
+{
+    background: transparent;
+}
+
+#Marine{
+    display: block;
+    position: relative;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 5px;
+    //visibility: hidden;
+}
+
+
+
+.disparait_stp {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .disparait_stp, .truc
+{
+        display: inline-block;
+
+}
+
+strong {
+    color: blue;
+}

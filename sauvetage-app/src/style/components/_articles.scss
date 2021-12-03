@@ -1,3 +1,52 @@
 .articles {
     text-align: center;
+    
+
+.contener {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    padding-bottom: 50px;
+    width: 700px;
+    position: absolute;
+    right:50%;
+    transform: translateX(50%);
+    grid-gap:40px;
+}
+.articles h2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.Arti_un {
+    background-color: $actuColor2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+.Arti_deux {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Arti_trois {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.Arti_deux, .Arti_trois {
+    background-color: $actuColor;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.Arti_un ,.Arti_deux, .Arti_trois {
+    border-radius: 2px;
+    padding:10px;
+}
+
 }
