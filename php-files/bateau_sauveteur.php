@@ -18,7 +18,6 @@ if(isset($_GET["id"]) && !empty($_GET["id"])) {
     $json_bateau["type"] = $bateau->get_type();
     $json_bateau["date_debut"] = $bateau->get_date_debut_utilisation();
     $json_bateau["date_fin"] = $bateau->get_date_fin_utilisation();
-
     $sauvetages = $SauvetageDAO->getSauvetageWithBateauS($bateau);
     $json_bateau["sauvetages"] = [];
     foreach ($sauvetages as $sauvetage) {
@@ -28,13 +27,9 @@ if(isset($_GET["id"]) && !empty($_GET["id"])) {
             "SELECT * FROM rids_bateau NATURAL JOIN dsmr_bateau_coule WHERE bateau_coule_id = ?",
             array($sauvetage["bateau_coule_id"])
         )[0];
-
         $json_sauvetage["bateau_coule"] = ["id"=>$bateau_coule["bateau_coule_id"], "nom"=>$bateau_coule["nom"]];
         $json_bateau["sauvetages"][] = $json_sauvetage;
     }
-
     $json_data["objet"] = $json_bateau;
-
-
     echo json_encode($json_data);
 }

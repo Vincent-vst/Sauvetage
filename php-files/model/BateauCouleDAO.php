@@ -34,8 +34,22 @@ class BateauCouleDAO
     public function delete(BateauCoule $bateau)
     {
         $this->bdd->execQuery(
-            "DELETE ON CASCADE FROM rids_bateau WHERE bateau_id = ?",
+            "DELETE FROM rids_bateau WHERE bateau_id = ?",
             array($bateau->get_bateau_id())
         );
+    }
+
+    public function getById($id): ?BateauCoule
+    {
+        $bateau = $this->bdd->execQuery(
+            "SELECT * FROM dsmr_bateau_coule NATURAL JOIN rids_bateau WHERE bateau_coule_id = ?",
+            array($id)
+        );
+
+        if (count($bateau) !== 0) {
+            return new BateauCoule($bateau[0]);
+        } else {
+            return null;
+        }
     }
 }
