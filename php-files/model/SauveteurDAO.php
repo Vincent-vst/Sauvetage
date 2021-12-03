@@ -1,5 +1,4 @@
 <?php
-require("Sauvetage.class.php");
 
 class SauveteurDAO
 {
@@ -43,6 +42,20 @@ class SauveteurDAO
             "DELETE FROM dpsk_personne WHERE personne_id = ?",
             array($naufrage->get_personne_id())
         );
+    }
+
+    public function getById(int $id): ?Sauveteur
+    {
+        $sauveteur = $this->bdd->execQuery(
+            "SELECT * FROM dpsk_personne NATURAL JOIN dmfr_sauveteur WHERE sauveteur_id = ? ",
+            array($id)
+        );
+
+        if (count($sauveteur) !== 0) {
+            return new Sauveteur($sauveteur[0]);
+        } else {
+            return null;
+        }
     }
 
 
