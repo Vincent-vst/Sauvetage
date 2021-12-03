@@ -34,8 +34,9 @@ class MedailleDAO
         );
     }
 
-    public function getById(int $id){
-        {
+    public function getById(int $id): ?Medaille
+    {
+        
             $medaille = $this->bdd->execQuery(
                 "SELECT * FROM fkdm_medaille WHERE medaille_id = ?",
                 array($id)
@@ -46,7 +47,20 @@ class MedailleDAO
             } else {
                 return null;
             }
+        
+    }
+
+    public function getByName(string $name): array
+    {
+        $query = $this->bdd->execQuery(
+            "SELECT * FROM fkdm_medaille WHERE nom = ?",
+            array($name)
+        );
+        $medaille = array();
+        foreach ($query as $medaille) {
+            $medaille[] = new Medaille($medaille);
         }
+        return $medaille;
     }
 
 }
