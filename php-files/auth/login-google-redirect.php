@@ -2,6 +2,7 @@
 
 require_once '../vendor/autoload.php';
 require './config.php';
+require '../base/config.php';
 
 use GuzzleHttp\Client;
 
@@ -36,9 +37,17 @@ try {
   if ($response->email_verified) {
     session_start();
     $_SESSION['email'] = $response->email;
-    dump($response);
-    //header('Location: ./success.php'); // TODO
-    //exit();
+    $_SESSION['logged'] = true;
+
+    // TODO
+    $_SESSION['is_admin'] = true;
+    $_SESSION['first_name'] = "";
+    $_SESSION['last_name'] = "";
+
+    $previousPage = isset($_SESSION['previous_page']) ? htmlspecialchars($_SESSION['previous_page']) : ROOT_URI;
+
+    header('Location: '.$previousPage);
+    exit();
   }
 }
 catch (\GuzzleHttp\Exception\ClientException $exception) {
