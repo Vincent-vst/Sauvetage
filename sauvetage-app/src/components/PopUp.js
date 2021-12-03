@@ -23,7 +23,7 @@ const PopUp = () => {
                 <div className="popUp-content">
                     <h2>Connexion</h2>
                     <div className="input-co"><input type="text" placeholder="Identifiant"/></div>
-                    <div className="input-co"><input type="text" placeholder="Mot de passe"/></div>
+                    <div className="input-co"><input type="password" placeholder="Mot de passe"/></div>
                     <div className="input-co"><input type="submit" placeholder="Valider"/></div>
                     <button className="close-popUp" onClick={togglePupUp}> X
                     </button>
