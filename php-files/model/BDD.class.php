@@ -26,3 +26,5 @@ class BDD
         return $this->connexion->lastInsertId();
     }
 }
+
+$bdd = new BDD();
