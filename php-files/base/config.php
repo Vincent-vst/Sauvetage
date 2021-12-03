@@ -1,6 +1,6 @@
 <?php
 
-define('ROOT_URI', 'nuitinfo/');
+define('ROOT_URI', 'localhost/');
 
 session_start();
 

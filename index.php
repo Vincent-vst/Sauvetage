@@ -1,3 +1,3 @@
 <?php
 
-echo "Accueil";
+require('./index.html');

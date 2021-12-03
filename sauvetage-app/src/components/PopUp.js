@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 
+
+
+
 const PopUp = () => {
 
     const[popUp, setPopUp] = useState(false);
@@ -7,6 +10,12 @@ const PopUp = () => {
     const togglePupUp = () => {
         setPopUp(!popUp)
     }
+
+    const url = () => {
+        return window.location.protocol + "/" + window.location.host + "/" + window.location.pathname + window.location.search
+    }
+
+    
 
     return (
         <>
@@ -27,8 +36,9 @@ const PopUp = () => {
                     <div className="input-co"><input type="submit" placeholder="Valider"/></div>
                     <button className="close-popUp" onClick={togglePupUp}> X
                     </button>
-                    <button className="google-popUp"> S'authentifier avec Google
+                    <button className="google-popUp" onClick= {() => window.location.href = "../../../php-files/auth/login-google.php?prev="+url()}> S'authentifier avec Google
                     </button>
+                    
                 </div>
             </div>
             )}
