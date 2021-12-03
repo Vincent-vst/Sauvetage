@@ -27,6 +27,8 @@ const PopUp = () => {
                     <div className="input-co"><input type="submit" placeholder="Valider"/></div>
                     <button className="close-popUp" onClick={togglePupUp}> X
                     </button>
+                    <button className="google-popUp"> S'authentifier avec Google
+                    </button>
                 </div>
             </div>
             )}
