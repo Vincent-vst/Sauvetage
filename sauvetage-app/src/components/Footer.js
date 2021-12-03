@@ -22,10 +22,7 @@ const Footer = () => {
             <div className="footerPlus">
                 <h1>En savoir plus</h1>
                 <ul>
-                    <li>A propos</li>
-                    <li></li>
-                    <li>Blub</li>
-                    <li>Blub</li>
+                    <li><NavLink to="/APropos">A propos</NavLink></li>
                 </ul>
             </div>       
             <div className="footerLiens">
