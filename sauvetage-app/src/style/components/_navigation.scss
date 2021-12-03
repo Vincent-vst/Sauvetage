@@ -1,13 +1,14 @@
 //spécifique au component navigation
 
 .navigation {
-    margin: 100px 0;
+    margin: 80px 0;
 }
 
 .navigation a {
     color: $policeColor;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
+    font-size: 20px;
 }
 
 

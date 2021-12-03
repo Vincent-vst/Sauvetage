@@ -2,7 +2,7 @@ import React from 'react';
 
 const recherche = () => {
     return (
-        <div>
+        <div class="recherche">
             <input type="text" placeholder="Rechercher" />
         </div>
     );
