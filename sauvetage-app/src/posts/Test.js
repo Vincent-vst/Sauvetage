@@ -7,7 +7,7 @@ class Test extends Component {
     render() {
         return (
             <div>
-                {medailles.map((medaillesDetail, index) => {
+                {medailles.map((medaillesDetail) => {
                     return (
                         <p>
                             Numéro de la médaille : {medaillesDetail.id}<br/>
