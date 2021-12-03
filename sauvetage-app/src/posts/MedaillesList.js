@@ -5,9 +5,11 @@ class MedaillesList extends Component {
     render () {
         return (
             <div>
-                <h1>Hello There</h1>
+                <h1>Médaille</h1>
                 {MedaillesData.map((medaillesDetail, index) => {
-                    return <h1>{medaillesDetail.id}</h1>
+                    return (<p>Numéro de la médaille :{medaillesDetail.id}<br/>
+                            Nom de la médaille :{medaillesDetail.nom}<br/>
+                            Description de la médaille :{medaillesDetail.description}</p>)
                 })}
             </div>
         )
