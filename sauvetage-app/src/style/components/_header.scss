@@ -1,0 +1,33 @@
+
+.logo, .navigation, .recherche {
+    display: inline-block;   
+}
+img {
+    width: 50%;
+}
+
+.logo {
+    padding-left: 3.5rem;
+    size:10px;
+}
+
+.recherche{
+    padding: 5rem 2rem;
+    float: right;
+}
+
+.btn-connexion {
+    width: 25px;
+    height: auto;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    float: right;
+}
+
+
+input {
+    padding: 5px;
+    background-color: $footerColor;
+    border: none;
+    color: $policeColor;
+}

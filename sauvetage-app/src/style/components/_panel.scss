@@ -1,0 +1,12 @@
+.panel {
+    z-index: -1;
+    background-color: $frontColor;
+    position: relative;
+    border-radius: 30px;
+    padding: 1em;
+    margin: auto;
+    width: 700px;
+    p {
+        line-height:2em;
+    }
+}
