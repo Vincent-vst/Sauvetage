@@ -8,14 +8,18 @@
   text-align: left;
   height: 200px;
   display: table;
-  padding-top: 50px;
-  margin-bottom: -300px;
+  margin-bottom: -400px;
   .footerCredit {
     padding: 0px 10px 0px 50px;
     display: table-cell;
+    
+  
     .textCredit {
       color: $greyText;
       padding-top: 2em;
+      bottom: 0;
+      position: absolute;
+     padding-bottom: 50px;
     }
   }
   .footerContact {
@@ -30,4 +34,5 @@
     padding: 0px 50px 0px 0px;
     display: table-cell;
   }
+
 }

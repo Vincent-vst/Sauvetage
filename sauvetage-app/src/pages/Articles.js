@@ -1,5 +1,3 @@
-import Nav from "../components/Nav";
-
 const Articles = () => {
     return (
         <div className="articles">
