@@ -2,7 +2,9 @@
 
 define('ROOT_URI', 'nuitinfo/');
 
-session_start();
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 if (!isset($_SESSION['email'])) {
   $_SESSION['email'] = "";
