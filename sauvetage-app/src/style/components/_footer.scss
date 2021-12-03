@@ -1,20 +1,27 @@
 .footer {
-    background-color: #11111c;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    .footerRight {
-        font-size: 20px;
-        h1 {
-            display: inline-block;
-            padding:20px;
-        }
+  background-color: $footerColor;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  height: 200px;
+  display: table;
+  padding-top: 50px;
+  .footerCredit {
+    padding: 0px 0px 0px 50px;
+    display: table-cell;
+    .textCredit {
+        color:$greyText;
     }
-    .footerRight {
-        font-size: 20px;
-        h1 {
-            display: inline-block;
-            padding:20px;
-        }
-    }
+  }
+  .footerContact {
+    display: table-cell;
+  }
+  .footerPlus {
+    display: table-cell;
+  }
+  .footerLiens {
+    padding: 0px 50px 0px 0px;
+    display: table-cell;
+  }
 }

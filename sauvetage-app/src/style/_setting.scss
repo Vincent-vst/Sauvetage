@@ -1,27 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
-$roseColor : #c53f85;
-$bgColor : #181828;
-$policeColor : #fbf9fa;
-$frontColor : #303054;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+$roseColor: #c53f85;
+$bgColor: #181828;
+$policeColor: #fbf9fa;
+$frontColor: #303054;
 $frontPanelBgColor: #242440;
-$footerColor : #11111c;
+$footerColor: #11111c;
+$greyText: #afabab;
 
 html {
-    font-family: Source Sans Pro;
-    color: $policeColor;
-    background-color: $bgColor;
-
+  font-family: Source Sans Pro;
+  color: $policeColor;
+  background-color: $bgColor;
 }
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 a:-webkit-any-link {
-    color: $policeColor;
-    cursor: pointer;
-    text-decoration: none;
+  color: $policeColor;
+  cursor: pointer;
+  text-decoration: none;
 }
 h1 {
-    font-size:20px;
+  font-size: 20px;
+  display: inline;
 }
 
+li {
+  text-align: none;
+}
+ul {
+  list-style-type: none;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start:0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
