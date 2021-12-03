@@ -34,6 +34,17 @@ class MedailleDAO
         );
     }
 
+    public function getList() {
+        $result = $this->bdd->execQuery(
+            "SELECT * FROM fkdm_medaille"
+        );
+        $medailles = [];
+        foreach ($result as $medaille) {
+            $medailles[] = new Medaille($medaille);
+        }
+        return $medailles;
+    }
+
     public function getById(int $id): ?Medaille
     {
         $medaille = $this->bdd->execQuery(
