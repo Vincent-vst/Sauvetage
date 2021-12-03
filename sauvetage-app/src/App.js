@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Accueil from './pages/Accueil';
 import Header from './components/Header';
 import MedaillesList from './posts/MedaillesList';
+import Test from './posts/Test';
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-      <MedaillesList />
+      <Test />
     </div>
   
     );

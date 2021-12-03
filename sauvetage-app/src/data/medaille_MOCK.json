@@ -1,7 +1,11 @@
-[
-	{
-		"id":1,
-		"nom":"prix miss France 2021",
-		"description":"medaille donnee car vous etes bo"
-	}
-]
+{
+	"type":"medaille",
+	"objet":
+	[
+		{
+			"id":1,
+			"nom":"prix miss France 2021",
+			"description":"medaille donnee car vous etes bo"
+		}
+	]
+}
