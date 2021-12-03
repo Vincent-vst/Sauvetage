@@ -3,6 +3,7 @@
 require_once '../vendor/autoload.php';
 require './config.php';
 require '../base/config.php';
+require '../model/BDD.class.php';
 
 use GuzzleHttp\Client;
 
@@ -34,15 +35,28 @@ try {
     ]
   ]);
   $response = json_decode((string)$response->getBody());
+
   if ($response->email_verified) {
-    session_start();
+    if (!isset($_SESSION)) { 
+      session_start();
+    }
     $_SESSION['email'] = $response->email;
     $_SESSION['logged'] = true;
 
-    // TODO
-    $_SESSION['is_admin'] = true;
-    $_SESSION['first_name'] = "";
-    $_SESSION['last_name'] = "";
+    $nameArray = explode(' ', $response->given_name, 2);
+    $_SESSION['first_name'] = $nameArray[0];
+    $_SESSION['last_name'] = $nameArray[1];
+
+    $res = $bdd->execQuery("select * from acih_utilisateur where email = ?", [$_SESSION['email']]);
+    //Already exists
+    if (count($res) !== 0) {
+      $_SESSION['is_admin'] = (bool)$res[0]["admin"];
+    }
+    // Does not exist
+    else {
+      $_SESSION['is_admin'] = false;
+      $res = $bdd->execQuery("insert into acih_utilisateur values (?, ?, ?, ?)", [$_SESSION['email'], $_SESSION['last_name'], $_SESSION['first_name'], $_SESSION['is_admin']]);
+    }
 
     $previousPage = isset($_SESSION['previous_page']) ? htmlspecialchars($_SESSION['previous_page']) : ROOT_URI;
 

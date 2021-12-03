@@ -2,7 +2,9 @@
 
 require '../base/config.php';
 
-session_start();
+if (!isset($_SESSION)) { 
+  session_start();
+}
 $_SESSION['email'] = "";
 $_SESSION['first_name'] = "";
 $_SESSION['last_name'] = "";

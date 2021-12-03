@@ -1,6 +1,11 @@
 {
+    "config": {
+        "platform": {
+            "php": "7.4.9"
+        }
+    },
     "require": {
-        "guzzlehttp/guzzle": "6.3.3",
-        "symfony/var-dumper": "^6.0"
+        "symfony/var-dumper": "^5.4",
+        "guzzlehttp/guzzle": "6.3.3"
     }
 }
