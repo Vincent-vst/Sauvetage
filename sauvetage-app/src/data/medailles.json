@@ -1,0 +1,32 @@
+{
+    "type":"sauveteur",
+    "objet":
+        [
+            {
+                "id":"1",
+                "nom":"Thys",
+                "prenom":"Mathis",
+                "date_naissance":"1870-10-12",
+                "lieu_naissance":"Dunkerque France",
+                "date_deces":"1899-10-10",
+                "lieu_deces":"Dunkerque France",
+                "metier":"Chef de chantier",
+                "medailles":
+                [
+                    {
+                        "nom":"medaille d'argent de 1re classe, deux etoiles d'argent",
+                        "id":"2",
+                        "date":"1890-02-05"
+                    }
+                ],
+                "sauvetages":
+                [
+                    {
+                        "id":"1",
+                        "date":"1890-02-03",
+                        "bateau_coule":"Dieu protege la France"
+                    }
+                ]
+            }
+        ]
+}
