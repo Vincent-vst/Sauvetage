@@ -1,6 +1,6 @@
 .footer {
   background-color: $footerColor;
-  position: static;
+  position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
@@ -9,6 +9,7 @@
   height: 200px;
   display: table;
   padding-top: 50px;
+  margin-bottom: -300px;
   .footerCredit {
     padding: 0px 10px 0px 50px;
     display: table-cell;

@@ -3,7 +3,7 @@ import Panel from './Panel'
 const Pres = () => {
     return (
         <div className="presentation">
-            <h2>Présentations</h2>
+            <h2>Présentation</h2>
             <Panel/>
         </div>
     );
