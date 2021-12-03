@@ -9,6 +9,7 @@ import Historique from './pages/Historique'
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Accueil from './pages/Accueil';
 import Header from './components/Header';
+import EasterEgg from './components/EasterEgg';
 const App = () => {
   return (
     <div className="App">
