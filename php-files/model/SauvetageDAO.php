@@ -29,7 +29,7 @@ class SauvetageDAO
     public function delete(Sauvetage $sauvetage)
     {
         $this->bdd->execQuery(
-            "DELETE ON CASCADE FROM sdff_sauvetage WHERE sauvetage_id = ?",
+            "DELETE FROM sdff_sauvetage WHERE sauvetage_id = ?",
             array($sauvetage->get_sauvetage_id())
         );
     }

@@ -1,11 +1,14 @@
 <?php
 
+require("Personne.class.php");
+
 class Sauveteur extends Personne
 {
     protected $sauveteur_id, $metier;
 
     public function __construct(array $donnees)
     {
+        parent::__construct($donnees);
         $this->hydrate($donnees);
     }
 

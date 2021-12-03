@@ -1,4 +1,5 @@
 <?php
+require("Personne.class.php");
 
 class Naufrage extends Personne
 {
@@ -6,6 +7,7 @@ protected $naufrage_id;
 
     public function __construct(array $donnees)
     {
+        parent::__construct($donnees);
         $this->hydrate($donnees);
     }
 

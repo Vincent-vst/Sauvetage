@@ -1,4 +1,5 @@
 <?php
+require("Bateau.class.php");
 
 class BateauCoule extends Bateau
 {
@@ -6,6 +7,7 @@ class BateauCoule extends Bateau
 
     public function __construct(array $donnees)
     {
+        parent::__construct($donnees);
         $this->hydrate($donnees);
     }
 

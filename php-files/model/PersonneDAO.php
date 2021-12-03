@@ -3,7 +3,7 @@
 
 class personneDAO
 {
-    private $bdd;
+    protected $bdd;
 
     public function __construct(BDD $bdd)
     {
