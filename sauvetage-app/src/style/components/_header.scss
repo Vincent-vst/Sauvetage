@@ -11,6 +11,14 @@ img {
 }
 
 .recherche{
-    padding: 6rem;
+    padding: 5rem;
     float: right;
+}
+
+
+input {
+    padding: 5px;
+    background-color: $footerColor;
+    border: none;
+    color: $policeColor;
 }
