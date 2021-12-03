@@ -38,6 +38,17 @@ body.active-popUp {
     padding: 5px 7px;
 }
 
+.google-popUp {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    background-color: $policeColor;
+}
+
+input[type = submit]:hover {
+    background-color: $roseColor;
+}
+
 .input-co {
     width: fit-content;
     display: block;
